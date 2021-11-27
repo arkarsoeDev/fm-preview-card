@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "./variables";
+* {
+    font-family: $c-font-family;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin margin-bottom(){
+    margin-bottom: $c-mb;
+}
+@mixin flex-center($ai:center,$jc:center) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+}
+@mixin icon($img-src) {
+    background: url($img-src) no-repeat;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+.container{
+    @include flex-center();
+    padding: 100px 20px;
+    background-color: $main-bg;
+    width: 100%;
+    .card-container{
+        width: 100%;
+        padding: 25px;
+        background-color: $card-bg;
+        border-radius: 10px;
+        .card-img{
+            position: relative;
+            @include margin-bottom();
+            .card-main-img{
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                display: block;
+            }
+            &:hover{
+                cursor: pointer;
+                .card-main-img{
+                    opacity: .3;
+                }
+                .middle {
+                    opacity: 1;
+                }
+            }
+            .middle{
+                opacity: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $secondary-color-hover;
+                position: absolute;
+                border-radius: 10px;
+                transition: .4s;
+                @include flex-center();
+                .main-img-icon{
+                    background:url("../images/icon-view.svg");
+                    width: 50px;
+                    height: 50px;
+                    display: block;
+                }
+            }
+            }
+        }
+        .card-content{
+            @include margin-bottom();
+            .card-title {
+                font-size: $c-font-l;
+                font-weight: $weight-h;
+                color: $c-white;
+                transition: .4s;
+                cursor: pointer;
+                @include margin-bottom();
+                &:hover{
+                    color: $secondary-color;
+                }
+            }
+            .card-text{
+                color: $primary-color;
+                font-size: $c-font-n;
+                line-height: 1.8;
+                font-weight: $weight-s;
+                @include margin-bottom(); 
+            }
+            .card-spec{
+                @include flex-center(center,space-between);
+                .card-quantity{
+                    @include flex-center(initial);
+                    color: $secondary-color;
+                    font-size: $c-font-n;
+                    .card-quantity-icon{
+                        @include icon("../images/icon-ethereum.svg")
+                    }
+                }
+                .card-duration{
+                    @include flex-center(initial);
+                    color: $primary-color;
+                    font-size: $c-font-n;
+                    .card-duration-icon{
+                        @include icon("../images/icon-clock.svg");
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+        .hr-line {
+            @include margin-bottom();
+            border-top: 1px solid $line;
+        }
+        .card-creator{
+            @include flex-center(center,start);
+            .card-creator-img{
+                @include flex-center();
+                margin-right: 10px;
+                .creator-img{
+                    width: 40px;
+                    border-radius:100%;
+                    border: 1px solid $c-white;
+                }
+            }
+            .card-creator-content{
+                color: $primary-color;
+                font-weight: $weight-s;
+                .creator-name{
+                    color: $c-white;
+                    transition: .4s;
+                    cursor: pointer;
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+@media only screen and (min-width: 376px) {
+    .container{
+        .card-container{
+            width: 370px;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+        }
+    }
+}
