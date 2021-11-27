@@ -6,7 +6,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -23,11 +22,6 @@ Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -51,5 +45,4 @@ I figured out how to make background opacity when I hoverd it.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@arkarsoeDev](https://www.frontendmentor.io/profile/arkarsoeDev)
